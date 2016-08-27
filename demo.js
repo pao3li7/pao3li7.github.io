@@ -8,7 +8,7 @@ $(function() {
     var oDiv = $('#thumbList').find('.thumb');
     //获取15个红包金额列表并铺出
     $.ajax({
-        url: "json/list.json",
+        url: "list.json",
         async: true,
         dataType: "json",
         type: "post",
@@ -50,7 +50,7 @@ $(function() {
         var _this=this;
         //获取结果ajax
             $.ajax({
-        url: "json/list.json",
+        url: "list.json",
         async: true,
         dataType: "json",
         type: "post",
