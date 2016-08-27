@@ -1,107 +1,177 @@
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<title>浪漫的程序员--闵钢</title>
-
-<EMBED src="stylesheets/LOVEPJY.mp3" hidden="true" loop="-1">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<link href="stylesheets/default.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="garden.js"></script>
-<script type="text/javascript" src="js.js"></script>
-</head>
-<body>
- <div id="mainDiv">
-  <div id="content">
-   <div id="code">
-    <p><span class="comments">Dear ZXW：</span><br />
-       <span class="comments">　　2015.01.07，我们在一起的第一天</span><br />
-       <span class="comments">　　我深深的被你那句“尽管你一无所有，我也会和你在一起的”感动了</span><br />
-       <span class="comments">　　尽管你说出的话很天真，但我却感觉到你的语气和眼神感觉到了你的纯真可爱</span><br />
-       Boy =<span class="string">"闵钢"</span>;<br />
-       Girl=<span class="string">"赵雪微"</span>;<br />
-	   <br />
-	   Preface:<br />
-       <span class="comments">　　2016, 爱你一世，我会用我的行动来证明我是真的很爱你</span><br />
-	   <br />
-       Warn:<br />
-       <span class="comments">　　从朋友到情侣，我们注定已经没有回头的路</span><br />
-       <span class="comments">　　一回头，我们便会成了那“最熟悉的陌生人”</span><br />
-       <br />
-       Future:<br />
-       <span class="comments">　　未来，很远，很近，很深，很难测</span><br />
-       <span class="comments">　　但不管未来怎样，我都会用最自信，最美好的心态去对待你和我们的爱情</span><br />
-       <span class="comments">　　未来，何去何从？</span><br />
-       <span class="comments">　　你的“未来我会和你一直走下去”这句话给了我一盏引路灯</span><br />
-	   <br />
-       Saying:<br />
-       <span class="comments">　　虽然程序员邋遢、无趣、情商低</span><br />
-       <span class="comments">　　但我的钱多、上进、厨艺好啊！你还不用担心我找外遇，我会去努力，会去拼搏，会去创造一切你需要的，你梦想的</span><br />
-       <br />
-       <br />
-       The and<br />
-       <span class="comments">　　记住你每一句对我说过的话</span><br />
-       <span class="comments">　　我很爱你，但愿你对我说过的每一句话都能成真</span></br />
-	   <span class="comments">　　让我们一起续写未来</span></br />
-	   <span class="comments">　　Let us write the future</span></br />
-    </p>
-   </div>
-   <div id="loveHeart">
-   <canvas id="garden"></canvas>
-   <div id="words">
-   <div id="messages">
-<center>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3712320065678109";
-/* lovead */
-google_ad_slot = "0650322805";
-google_ad_width = 320;
-google_ad_height = 50;
-//-->
-</script>
-</script>
-</center>　　　　赵雪微，闵钢爱你一生一世
-</div>
-              </div>
-          </div>
-      </div>
-        </div>
-        <div style="clear:both"></div>
-        <div id="copyright">
-           作者: <a href="#">赵雪微的爱人-闵钢</a><br />
-        </div>
-    </div>
-    <script type="text/javascript">
-        var offsetX = $("#loveHeart").width() / 2;
-        var offsetY = $("#loveHeart").height() / 2 - 55;
-        
-        if (!document.createElement('canvas').getContext) {
-            var msg = document.createElement("div");
-            msg.id = "errorMsg";
-            msg.innerHTML = "Your br /owser doesn't support HTML5!<br />Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-            document.body.appendChild(msg);
-            $("#code").css("display", "none")
-            $("#copyright").css("position", "absolute");
-            $("#copyright").css("bottom", "10px");
-            document.execCommand("stop");
-        } else {
-            setTimeout(function () {
-                adjustWordsPosition();
-                startHeartAnimation();
-            }, 10000);
-            
-            $("#accept").click(function(){
-                $(this).hide();
-                $("#elapseClock").show();
-                var together = new Date();
-                timeElapse(together);
-                setInterval(function () {
-                    timeElapse(together);
-                }, 500);
-            })
-            adjustCodePosition();
-            $("#code").typewriter();
-        }
-    </script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+  <title>红包</title>  
+  <link rel="stylesheet" type="text/css" href="css/demo.css" /> 
+ </head> 
+ <body> 
+ <!-- 头部背景图 -->
+  <header> 
+   <img src="images/banner.png" /> 
+  </header> 
+  <!-- 显示所有的红包 -->
+  <section> 
+   <ul id="list"> 
+   </ul> 
+   <div style="clear: both;"></div> 
+  </section> 
+  <h2>点击下面红包，试试手气吧！</h2> 
+  <!-- 可点击的红包栏 -->
+  <section id="thumbList"> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> 文字1 </span> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+ <!--  提示框 -->
+  <section> 
+   <div id="layers"> 
+    <h3>提示</h3> 
+    <div class="result">
+     恭喜您获得
+     <b></b>元红包
+    </div> 
+    <div> 
+     <div class="go">
+      继续拆红包
+     </div> 
+     <div class="sure">
+      确定
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- 旋转dom -->
+  <div id="aniDiv"> 
+   <div class="thumb flip"> 
+    <div class="thumb-wrapper"> 
+     <img src="images/open.png" alt="" /> 
+     <div class="thumb-detail"> 
+      <span href=""> <b></b>元 </span> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="js/jquery.js"></script> 
+  <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script> 
+  <script type="text/javascript" src="js/demo.js"></script>  
+ </body>
 </html>
