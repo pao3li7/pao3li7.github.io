@@ -16,7 +16,7 @@ $(function() {
         url: "./json/list.json",
         async: true,
         dataType: "json",
-        type: "post",
+        type: "get",
         success: function(data) {
             if (data.rs == 1) {
                 var liText = "";
@@ -67,7 +67,7 @@ $(function() {
         var _this=this;
         //获取结果ajax
             $.ajax({
-        url: "json/list.json",
+        url: "./json/list.json",
         async: true,
         dataType: "json",
         type: "post",
