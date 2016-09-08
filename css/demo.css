@@ -6,9 +6,13 @@
 body {
 	font-family:"微软雅黑",Georgia,Serif;
 	background-color: #a52031;
+	-webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;			
+    -ms-transform-style: preserve-3d;			
+     -o-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	perspective: 200px;
-	color: white;
+	color: #baa46b;
 	font-size: 12px;
 }
 
@@ -18,26 +22,36 @@ body {
 	float: left;
 	background: #e1544a;
 	margin: 0.3em 1%;
-	padding: 0.4em 0;
+	padding: 0.7em 0;
 	text-align: center;
 }
 
-#list li b {
-	color: #bba967;
+b {
+	color: #baa46b;
 	font-size: 1.5em;
 }
 
+.thumb-detail b {
+	font-size: 2em;
+}
+
+.thumb-detail>span>span {
+	display: block;
+	text-align: center;
+}
+
 h2 {
-	color: #ff9565;
+	color: #ffaa4b;
 	font-size: 1.2em;
 	text-align: center;
 	margin: 1em 0;
+	font-weight: 400;
 }
 
 #layers {
 	display: none;
 	position: fixed;
-	background: white;
+	background: #e1544a;
 	-moz-border-radius: 5px;
  /* Firefox */
 	-webkit-border-radius: 5px;
@@ -51,39 +65,76 @@ h2 {
 }
 
 #layers h3 {
-	color: #868686;
+	color:white;
 	font-size: 1.2em;
 	margin: 0.5em 0;
 }
 
+#layers h3 span {
+	position: absolute;
+right: 1em;
+top: 0.1em;
+color: #bc3d36;
+cursor: pointer;
+}
+
+.tips {
+	background-color: #7b7774;
+width: 100%;
+position: fixed;
+top: 0px;
+z-index: 99;
+display: none;
+opacity: 0.5;
+filter:alpha(opacity=50); /* 针对 IE8 以及更早的版本 */
+}
+
 .result {
 	letter-spacing: 0.1em;
-	color: black;
+	color: white;
 	margin: 1em 0 1.5em 0;
+}
+.result b {
+	color: white;
+}
+
+.imgContent {
+	position: relative;
+	z-index: 1000;
+	color: #bba967 !important;
 }
 
 .go,.sure {
-	background-color: #06bc08;
+	background-color: #f8c301;
 	-moz-border-radius: 5px;
  /* Firefox */
 	-webkit-border-radius: 5px;
  /* Safari 和 Chrome */
 	border-radius: 5px;
 	width: 40%;
-	display: inline-block;
-	margin: 0.3em 0.1em 1.3em 0;
+	margin:0 auto;
 	padding: 0.5em 0.1em;
 	cursor: pointer;
+	color: #d34a02;
+}
+
+.sure {
+	margin-top: 1em;
+	margin-bottom: 2em;
 }
 
 #aniDiv {
 	display: none;
 	position: absolute;
-	z-index: 999;
+	z-index: 1;
 }
 
 #aniDiv span {
 	color:red;
+}
+
+#aniDiv .thumb-detail>span{
+	display: none;
 }
 
 .thumb {
@@ -99,6 +150,11 @@ h2 {
 	box-sizing: border-box;
 	padding: 5px 5px;
 	cursor: pointer;
+	
+}
+
+.thumb-detail {
+	background-color: #da4d43 !important;
 }
 
 .thumb-wrapper {
@@ -132,16 +188,15 @@ h2 {
 	border-radius: 4px;
 }
 
-.thumb .thumb-detail span {
+.thumb .thumb-detail>span {
 	display: block;
 	width: 100%;
 	height: 100%;
 	text-transform: uppercase;
 	font-weight: bold;
-	color: #333;
+	color: #ff9565;
 	text-decoration: none;
-	letter-spacing: -1px;
-	padding: 10px;
+	
 }		
 	
 	/*
@@ -172,7 +227,7 @@ h2 {
 	-moz-transition: -moz-transform 1s;
 	-ms-transition: -moz-transform 1s;
 	-o-transition: -moz-transform 1s;
-	transition: -moz-transform 1s;
+	transition: transform 1s;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
