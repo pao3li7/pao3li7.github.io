@@ -13,7 +13,7 @@ $(function() {
 
     //获取15个红包金额列表并铺出
     $.ajax({
-        url: "json/list.json",
+        url: "./json/list.json",
         async: true,
         dataType: "json",
         type: "post",
